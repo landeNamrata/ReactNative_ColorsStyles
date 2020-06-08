@@ -1,0 +1,25 @@
+//Without reducer
+import React, { useState } from 'react'
+import { Text, View, Button } from 'react-native'
+
+const CounterScreen1 = () => {
+    const [counter, setCounter] = React.useState(0)
+    return (
+        <View>
+            <Button
+                title="Increment"
+                onPress={() => {
+                    setCounter(counter + 1)
+                }}
+            ></Button>
+            <Button
+                title="Decrement"
+                onPress={() => {
+                    setCounter(counter - 1)
+                }}
+            ></Button>
+            <Text style={{alignSelf:'center',marginTop:'5%'}} >Counter Value:{counter} </Text>
+        </View>
+    )
+}
+export default CounterScreen1;
